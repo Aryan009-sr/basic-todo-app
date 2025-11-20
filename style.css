@@ -1,0 +1,174 @@
+*{
+  box-sizing: border-box
+}
+
+body{
+  margin:0;
+  padding:20px;
+  font-family: Arial, sans-serif;
+  background: rgba(128, 127, 127, 0.87)
+}
+
+.container{
+  width:100%;
+  max-width:480px;
+  margin:auto;
+  background:#ccc;
+  padding:20px;
+  border-radius:15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+  font-size:1.5rem;
+}
+
+/* input section */
+.input-area{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+#taskInput{
+  padding:12px;
+  font-size:16px;
+  border-radius:8px;
+  border:none;
+}
+
+#addBtn{
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#007aff;
+  color:white;
+  cursor:pointer;
+  font-size:16px;
+}
+
+#addBtn:hover {
+  background: #0066d6;   
+  transform: scale(1.03); 
+  transition: 0.2s ease;  
+}
+
+/* List Items*/
+li {
+  background:#fff;
+  padding:12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  border-left: 6px solid #007bff;
+  word-break: break-word;
+  /* margin-right:50px; */
+}
+
+/* Text Area */
+li span {
+  flex: 1;
+  min-width: 0;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+
+/* Action Buttons */
+.actions {
+  display:flex;
+  gap:8px;
+  flex-wrap: wrap;
+}
+
+.actions button{
+  flex:1;
+  padding: 10px 12px;
+  border:none;
+  border-radius: 5px;
+  cursor:pointer;
+  font-size: 14px;
+}
+
+/* button colors */
+.actions button:nth-child(1){
+  background:#28a745;
+  color:white
+}
+.actions button:nth-child(2){
+  background: #ffc107;
+}
+
+.actions button:nth-child(3){
+  background:#dc3545;
+  color:white;
+}
+
+/* completed tAsk style */
+.completed{
+  text-decoration:line-through;
+  opacity:0.5;
+  color:red;
+}
+
+#clearAllTask{
+  background-color:#dc3545;
+  color:white;
+  cursor:pointer;
+  padding:10px;
+  border-radius:8px;
+  width:100%;
+  margin-top:12px;
+  border:none;
+  font-size: 16px;
+}
+
+#clearAllTask:hover{
+  background-color: #c82333;
+}
+
+/* TABLET */
+
+@media (min-width: 480px) {
+  .input-area {
+    flex-direction:row;
+  }
+  #addBtn {
+    width:150px;
+  }
+
+  li{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+  }
+
+  .actions {
+    flex-wrap:nowrap;
+    flex-shrink:0;
+    gap:6px;
+  }
+
+  .actions button{
+    flex: unset;
+    padding:6px 10px;
+  }
+}
+
+/* RESPONSIVE – DESKTOP */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    padding: 16px;
+  }
+}
